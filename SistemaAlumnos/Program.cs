@@ -6,27 +6,11 @@ namespace SistemaAlumnos
     {
         static void Main(string[] args)
         {
-            Alumno alumno1 = new Alumno()
-            {
-                Nombre = "Ramiro Garcia",
-                Legajo = 54321,
-                Nota1 = 8.5m,
-                Nota2 = 9.0m
-            };
-
+            Alumno alumno1 = new Alumno("Ramiro", 54321, 8.5m, 9.0m);
             Console.WriteLine(alumno1.Nombre + " - " + alumno1.Legajo);
 
-            Alumno alumno2 = new Alumno()
-            {
-                Nombre = "Obricio",
-                Legajo = 12345,
-                Nota1 = 7.0m,
-                Nota2 = 8.5m
-            };
-
+            Alumno alumno2 = new Alumno("Obricio", 12345, 7.0m, 8.5m);
             Console.WriteLine(alumno2.Nombre + " - " + alumno2.Legajo);
-
-            
         }
     }
 }
