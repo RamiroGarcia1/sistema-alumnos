@@ -38,6 +38,10 @@ namespace SistemaAlumnos
                 Nota2 += 1;
             }
         }
+        public override string ToString()
+        {
+            return $"{Legajo} - {Nombre} (promedio: {Promedio()})";
+        }
     }
 }
 
