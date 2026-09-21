@@ -2,7 +2,7 @@
 
 namespace SistemaAlumnos
 {
-    public class Alumno : Persona
+    public class Alumno : Persona, IExportable
     {
      
         public decimal Nota1 { get; private set; }
@@ -52,6 +52,11 @@ namespace SistemaAlumnos
         public override string Presentarse()
         {
             return $"Hola, soy {Nombre}, alumno con legajo {Documento}" ;
+        }
+
+        public string ExportarLinea()
+        {
+            return $"ALUMNO;{Documento};{Nombre};{Promedio()}";
         }
     }
 }

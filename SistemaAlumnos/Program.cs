@@ -123,6 +123,21 @@ namespace SistemaAlumnos
             {
                 Console.WriteLine(persona.Presentarse());
             }
+
+            Materia materia1 = new Materia("PROG1", "Programacion I", 128);
+            Materia materia2 = new Materia("BD1", "Bases de Datos I", 96);
+
+            List<IExportable> exportables = new List<IExportable>();
+            exportables.Add(alumno1);
+            exportables.Add(alumno2);
+            exportables.Add(new Profesor("Marta Diaz", 99999, "Programacion"));
+            exportables.Add(materia1);
+            exportables.Add(materia2);
+
+            foreach (IExportable item in exportables)
+            {
+                Console.WriteLine(item.ExportarLinea());
+            }
         }
     }
 }
