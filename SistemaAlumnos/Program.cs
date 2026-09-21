@@ -17,7 +17,13 @@ namespace SistemaAlumnos
             Console.WriteLine(alumno2.Promedio());
 
             Console.WriteLine(alumno1);
+
+
+            if (!alumno1.CargarNotas(8.5m, 15.0m))
+            {
+                Console.WriteLine("Notas inválidas");
+            }
         }
     }
 
-    }
+}
