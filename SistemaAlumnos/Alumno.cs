@@ -49,6 +49,10 @@ namespace SistemaAlumnos
             return false;
         }
 
+        public override string Presentarse()
+        {
+            return $"Hola, soy {Nombre}, alumno con legajo {Documento}" ;
+        }
     }
 }
 

@@ -90,7 +90,7 @@ namespace SistemaAlumnos
                             {
                                 sumaPromedios += alumno.Promedio();
                             }
-                            decimal promedioGeneral = sumaPromedios/alumnos.Count;
+                            decimal promedioGeneral = sumaPromedios / alumnos.Count;
                             Console.WriteLine($"Promedio general: {promedioGeneral}");
                         }
                         break;
@@ -112,6 +112,16 @@ namespace SistemaAlumnos
                         Console.WriteLine("Opcion invalida");
                         break;
                 }
+            }
+
+            List<Persona> personas = new List<Persona>();
+            personas.Add(alumno1);
+            personas.Add(new Profesor("Marta Diaz", 99999, "Programacion"));
+            personas.Add(new Preceptor("Juan Perez", 55555));
+
+            foreach (Persona persona in personas)
+            {
+                Console.WriteLine(persona.Presentarse());
             }
         }
     }
