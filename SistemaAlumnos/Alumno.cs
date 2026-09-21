@@ -2,19 +2,15 @@
 
 namespace SistemaAlumnos
 {
-    public class Alumno
+    public class Alumno : Persona
     {
-        public string Nombre { get; set; }
-        public int Legajo { get; private set; }
+     
         public decimal Nota1 { get; private set; }
         public decimal Nota2 { get; private set; }
 
-        public Alumno(string nombre, int legajo, decimal nota1, decimal nota2)
+        public Alumno(string nombre, int documento) : base(nombre, documento)
         {
-            Nombre = nombre;
-            Legajo = legajo;
-            Nota1 = nota1;
-            Nota2 = nota2;
+
         }
 
         public decimal Promedio()
@@ -40,7 +36,7 @@ namespace SistemaAlumnos
         }
         public override string ToString()
         {
-            return $"{Legajo} - {Nombre} (promedio: {Promedio()})";
+            return $"{Documento} - {Nombre} (promedio: {Promedio()})";
         }
         public bool CargarNotas(decimal nota1, decimal nota2)
         {
